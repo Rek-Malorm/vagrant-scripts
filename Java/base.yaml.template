@@ -1,0 +1,6 @@
+config:
+  name: "vm_name"
+  memory: "4096"
+  threads: "4"
+  shares:
+    - {source: "~/path/to/source", destination: "/home/vagrant/path/to/dest"}
