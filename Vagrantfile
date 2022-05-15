@@ -23,6 +23,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.synced_folder ".", "/vagrant", disabled: true
 
   base_config["config"]["shares"].each do |share|
-    config.vm.synced_folder share["source"], share["destination"]
+    config.vm.synced_folder share["source"], share["destination"], create: true
   end
 end

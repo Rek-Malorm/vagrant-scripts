@@ -1,0 +1,6 @@
+config:
+  name: "java_dev"
+  memory: "4096"
+  threads: "4"
+  shares:
+    - { source: "~/.m2", destination: "/home/vagrant/.m2" }
