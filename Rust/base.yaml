@@ -1,0 +1,4 @@
+config:
+  name: "rust_dev"
+  memory: "4096"
+  threads: "4"

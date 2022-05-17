@@ -12,6 +12,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
    config.vm.provider "virtualbox" do |vb|
      vb.memory = base_config["config"]["memory"]
      vb.cpus = base_config["config"]["threads"]
+     vb.customize ["modifyvm", :id, "--ioapic", "on"]
    end
 
   config.vm.define base_config["config"]["name"]
@@ -22,7 +23,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.synced_folder ".", "/vagrant", disabled: true
 
-  base_config["config"]["shares"].each do |share|
-    config.vm.synced_folder share["source"], share["destination"], create: true
+  if(base_config["config"]["shares"] != nil)
+    base_config["config"]["shares"].each do |share|
+      config.vm.synced_folder share["source"], share["destination"], create: true
+    end
   end
+
 end
