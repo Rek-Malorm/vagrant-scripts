@@ -16,7 +16,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
    end
 
   config.vm.define base_config["config"]["name"]
-  config.vm.box = "ubuntu/impish64"
+  config.vm.box = "ubuntu/lunar64"
   config.vm.provision :shell, path: "bootstrap.sh"
 
   config.ssh.forward_x11 = true
