@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-apt-get update && apt-get upgrade
+apt update -y && apt upgrade -y
 
 echo Install base applications
-sudo apt-get install -y build-essential gcc cmake flatpak
+apt install -y build-essential gcc cmake flatpak

@@ -1,0 +1,4 @@
+config:
+  name: "node_dev"
+  memory: "4096"
+  threads: "4"
