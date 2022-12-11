@@ -15,4 +15,4 @@ echo Install node
 apt install -y npm nodejs
 
 echo Install Firefox
-apt install -y
+apt install -y firefox
